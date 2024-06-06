@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 import logging
+import os
 
 # Configuración de Logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -9,7 +10,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 app = Flask(__name__)
 
 # Cargar el modelo entrenado
-model = joblib.load('./mle-intv-main/model.pkl')
+model_path = os.getenv('MODEL_PATH', './model.pkl')
+model = joblib.load(model_path)
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -33,4 +35,4 @@ def predict():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8888)
