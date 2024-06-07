@@ -51,7 +51,7 @@ We ask that you:
       platform (ie: AzureML, VertexAI, Sagemaker, etc).
 
 ## Extra points 
-Even though not required it would be awsome if you can write some of the following:
+Even though not required it would be awesome if you can write some of the following:
     - Unit test for some the code you write
     - A github action to build the docker container
     - Integration test for a running docker container
