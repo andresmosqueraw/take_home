@@ -14,8 +14,7 @@ This take home assignment is designed to assess following:
 
 ## Getting Started
 
-Your starting point will be the [Model_Training.ipynb](notebooks/MLE_Interview_DS.ipynb) notebook provided in
-the `notebooks` directory of this repo.
+Your starting point will be the [Model_Training.ipynb](notebooks/MLE_Interview_DS.ipynb) notebook provided in the `notebooks` directory of this repo.
 
 We ask that you:
 
